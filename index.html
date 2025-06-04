@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Zenith - Home</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('fotos/fundo ajuda.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1.5s ease;
+        }
+
+        .logo {
+            max-width: 250px;
+            width: 80%;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+        }
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            color: #d0d0d0;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .buttons a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+
+        .buttons a:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+            background: linear-gradient(135deg, #00b4d8, #0077b6);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+
+            .buttons a {
+                padding: 12px 24px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="fotos/sem fundo.png" alt="Logo Digital Zenith" class="logo">
+        <h1>Bem-vindo à Digital Zenith</h1>
+        <p>Somos especialistas em manutenção de computadores, redes, servidores e soluções tecnológicas para empresas e pessoas. Garantimos inovação e desempenho para você!</p>
+
+        <div class="buttons">
+            <a href="PAG2-textinho.html">NOSSA EMPRESA</a>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Zenith - Serviços</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #022636, #0a5275);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px 0 20px;
+            font-size: 36px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 50px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-between;
+        }
+
+        .card .user {
+            width: 50%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        section {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto 40px;
+            padding: 0 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 28px;
+            border-bottom: 2px solid #0a5275;
+            padding-bottom: 8px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #d0d0d0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+        }
+
+        ul li b {
+            color: #a0c8e0;
+        }
+
+        .bottom-nav {
+            margin: 30px auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .bottom-nav a,
+        .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover,
+        .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #022636;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            ul {
+                font-size: 16px;
+            }
+
+            .card p {
+                font-size: 14px;
+            }
+
+            .bottom-nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+        .card .user {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 2px solid white;
+}
+    </style>
+</head>
+
+<body>
+
+    <h1>Serviços da Digital Zenith</h1>
+
+    <section class="cards">
+
+        <div class="card">
+            <img class="user" src="fotos/FT1.jpg" alt="Manutenção">
+            <h3>MANUTENÇÃO EM COMPUTADORES</h3>
+            <p>Serviço especializado em manutenção de computadores, garantindo desempenho otimizado e solução ágil para problemas técnicos.</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="fotos/FT2.jpg" alt="Rede">
+            <h3>REDE E CABEAMENTO</h3>
+            <p>Infraestrutura sólida é a base do seu sucesso. Desenvolvemos redes eficientes e cabeamento confiável para sua empresa.</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="fotos/FT3.jpg" alt="Preventiva">
+            <h3>MANUTENÇÃO PREVENTIVA</h3>
+            <p>Mantenha seus dispositivos sempre em pleno funcionamento. Suporte técnico para garantir desempenho contínuo.</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="fotos/FT4.png" alt="Backup">
+            <h3>BACKUP E RESTAURAÇÃO DE DADOS</h3>
+            <p>Previna a perda de dados. Nossas soluções de backup garantem que suas informações estejam sempre seguras e recuperáveis.</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="fotos/FT5.jpg" alt="Terceirização">
+            <h3>TERCEIRIZAÇÃO DE TI</h3>
+            <p>Deixe a gestão de tecnologia conosco para focar no seu negócio. Suporte, manutenção e inovação para sua empresa.</p>
+        </div>
+
+        <div class="card">
+            <img class="user" src="fotos/FT6.jpg" alt="Servidores">
+            <h3>SERVIDORES DEDICADOS</h3>
+            <p>Potência exclusiva para seus aplicativos e dados. Servidores dedicados para performance e confiabilidade superiores.</p>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Missão</h2>
+        <ul>
+            <li><b>Manutenção Preventiva:</b> Intervenções periódicas para identificar e corrigir falhas antes que causem problemas.</li>
+            <li><b>Manutenção Corretiva:</b> Atendimento ágil para diagnóstico e reparo, restaurando rapidamente o funcionamento.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Visão</h2>
+        <ul>
+            <li><b>Excelência no Atendimento:</b> Ser referência em serviços de TI, reconhecida pela qualidade e agilidade.</li>
+            <li><b>Inovação:</b> Investir continuamente em tecnologia para oferecer as melhores soluções.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Valores</h2>
+        <ul>
+            <li><b>Transparência:</b> Comunicação clara e honesta com nossos clientes.</li>
+            <li><b>Comprometimento:</b> Dedicação total para garantir satisfação e confiança.</li>
+            <li><b>Profissionalismo:</b> Equipe qualificada e ética em todas as atividades.</li>
+        </ul>
+    </section>
+
+    <div class="bottom-nav">
+        <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG4- parceiros.html">NOSSOS PARCEIROS</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Digital Zenith. Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro.</p>
+    </footer>
+
+</body>
+
+</html>

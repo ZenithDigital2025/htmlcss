@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Zenith</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #022636, #0a5275);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Imagem no topo */
+        .top-image {
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+        }
+
+        .top-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Slogan */
+        .slogan {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        /* Navegação inferior */
+        .bottom-nav {
+            margin: 30px auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .bottom-nav a,
+        .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover,
+        .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #022636;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 0 0 15px 15px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .bottom-nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            main {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Imagem no topo (opcional, se quiser colocar) -->
+    <!-- <div class="top-image">
+        <img src="fotos/seu-banner.png" alt="Banner da Digital Zenith">
+    </div> -->
+
+    <!-- Slogan -->
+    <div class="slogan">
+        EM DIREÇÃO AO TOPO E QUALIDADE
+    </div>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section>
+            <h2>Sobre a Empresa</h2>
+            <p>
+                Fundada em 13 de maio de 2024, a <strong>Digital Zenith</strong> é uma empresa especializada em soluções tecnológicas de alto padrão.
+                Nosso compromisso é oferecer serviços de qualidade, com agilidade, eficiência e inovação.
+            </p>
+            <p>
+                Contamos com uma equipe altamente qualificada e uma infraestrutura preparada para atender às necessidades dos nossos clientes,
+                entregando soluções inteligentes, seguras e personalizadas. Na Digital Zenith, acreditamos que a excelência não é um diferencial,
+                é o nosso padrão.
+            </p>
+        </section>
+    </main>
+
+    <!-- Botões de navegação -->
+    <div class="bottom-nav">
+        <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG3-Serviços.html">SERVIÇOS</a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        &copy; 2024 Digital Zenith. Todos os direitos reservados.
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Zenith - Serviços</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #022636, #0a5275);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0 20px 0;
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card .user {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 2px solid white;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .card p {
+            display: none;
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #e0e0e0;
+        }
+
+        .bottom-nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Botões com estilo igual ao carrossel */
+        .bottom-nav a {
+            background-color: rgba(78, 192, 240, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .bottom-nav a:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #022636;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+             .bottom-nav {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+    }
+        .bottom-nav a, .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover, .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            .carrossel-container {
+                width: 90%;
+                height: 20rem;
+            }
+
+            .bottom-nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Comentários</h1>
+
+    <section class="cards">
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/nexo.jpg" alt="Maria">
+            <h3>Nexo</h3>
+        <p>"A Digital Zenith é fantástica! Resolveram meu problema com o computador rápido e com um atendimento impecável. Recomendo muito! Mas eles precisam de mais NEXO!!!"</p>
+        </div>
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/URSO INTELIGENTE.jpg" alt="João">
+            <h3>Intelecto</h3>
+            <p>Atendimento excelente e serviço eficiente. Minha empresa confiou na Digital Zenith para manutenção e nunca mais tivemos problemas técnicos.</p>
+        </div>
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/URSO PREGUIÇA.jpg" alt="Beatriz">
+            <h3>Sonooo</h3>
+            <p>Profissionais qualificados e rápidos. A manutenção feita pela Digital Zenith salvou meu PC e ainda deram ótimas dicas para evitar problemas futuros.</p>
+        </div>
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/asfoto.png" alt="Carlos">
+            <h3>Assistec</h3>
+            <p>"Serviço de qualidade e transparência total. Consertei meu notebook com eles e fiquei muito satisfeito com o preço e o resultado."</p>
+        </div>
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/nexora.jpg" alt="Ana Luiza">
+            <h3>Nexoraa</h3>
+            <p>"Atendimento simpático e rápido. A Digital Zenith me ajudou quando meu computador parou de funcionar do nada. Recomendo para quem precisa de confiança."</p>
+        </div>
+
+        <div class="card" onclick="toggleMessage(this)">
+            <img class="user" src="fotos/thiago.jpg" alt="Rafael">
+            <h3>Thiago</h3>
+            <p>"A Digital zenith é tão boa que todas as empresas de manutenção da região elogia eles!"</p>
+        </div>
+
+    </section>
+
+    <div class="bottom-nav">
+         <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG7-carossel.html">NOSSAS FOTOS</a>
+    </div>
+
+  
+
+    <script>
+        function toggleMessage(card) {
+            const message = card.querySelector('p');
+            const isVisible = message.style.display === 'block';
+
+            // Oculta todas as mensagens
+            document.querySelectorAll('.card p').forEach(p => p.style.display = 'none');
+
+            // Se não estava visível, mostra
+            if (!isVisible) {
+                message.style.display = 'block';
+            }
+        }
+    </script>
+    
+  <footer>
+        <p>&copy; 2025 Digital Zenith. Todos os direitos reservados. | Endereço: São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro.</p>
+    </footer>
+</body>
+
+</html>

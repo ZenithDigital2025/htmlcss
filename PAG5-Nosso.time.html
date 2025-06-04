@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Time - Digital Zenith</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64" />
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #021b2c, #084d75);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            margin-top: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .parceiros {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px 0;
+        }
+
+        .parceiro {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .parceiro img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #4ec0f0;
+        }
+
+        .parceiro:hover {
+            transform: scale(1.05);
+        }
+
+        .nome {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        nav {
+            margin: 20px 0 40px 0;
+            padding: 12px 36px;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav:hover {
+            background-color: rgba(20, 20, 20, 1);
+            transform: scale(1.05);
+        }
+
+        .bottom-nav {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .bottom-nav a, .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover, .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            .bottom-nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nosso Time</h1>
+
+    <div class="parceiros">
+        <div class="parceiro">
+            <img src="fotos/ana julia.jpg" alt="Ana Julia">
+            <div class="nome">Ana Julia</div>
+            <div class="bio">"Olá sou Ana Júlia tenho 18 anos estou no terceiro ano do ensino médio gosto de tecnologia e tudo que se liga á tecnologia , pintura e música." </div>
+        </div>
+        <div class="parceiro">
+            <img src="fotos/thiago.jpg" alt="Thiago">
+            <div class="nome">Thiago</div>
+            <div class="bio">"Olá, me chamo Thiago Lisboa, tenho 18 anos e sou um aluno do Terceiro ano do ensino médio, estou cursando T.I na parte da noite. Minha área mais desenvolvida na tecnologia até agora e a parte do hardware."</div>
+        </div>
+        <div class="parceiro">
+            <img src="fotos/suelen.jpg" alt="Suelen">
+            <div class="nome">Suelen</div>
+            <div class="bio">"Olá tenho 17 anos, estou no terceiro ano do ensino médio gosto de ler, programação e adoro livros classicos e fictícios."</div>
+        </div>
+        <div class="parceiro">
+            <img src="fotos/usinhozenith.jpg" alt="Lucas">
+            <div class="nome">Polar</div>
+            <div class="bio">"olá sou o parceiro digital da Zenith, estou aqui para traser momentos interativos para os usuários, adóro resolver problemas técnicos internos dos computadores."</div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG6-Comentários.html">COMENTÁRIOS</a>
+    </div>
+
+</body>
+</html>

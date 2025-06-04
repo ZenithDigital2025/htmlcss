@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nossos Parceiros</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #022636, #0a5275);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+            font-size: 36px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .partners-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            width: 100%;
+            max-width: 1100px;
+            flex-grow: 1;
+        }
+
+        .partner-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #e0e0e0;
+            transition: transform 0.3s ease;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .partner-card img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid white;
+            object-fit: contain;
+        }
+
+        .partner-card h3 {
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .partner-card p {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 280px;
+        }
+
+        .bottom-nav {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .bottom-nav a,
+        .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover,
+        .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        footer {
+            width: 100%;
+            background-color: #022636;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 14px;
+            border-radius: 0 0 15px 15px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .partner-card p {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nossos Parceiros</h1>
+
+    <div class="partners-container">
+        <div class="partner-card">
+            <img src="fotos/logo zenith com fundo.jpg" alt="Digital Zenith Logo" />
+            <h3>Digital Zenith</h3>
+            <p>
+                A Digital Zenith é especialista em manutenção digital, oferecendo serviços preventivos e corretivos para garantir o máximo desempenho dos seus equipamentos. Com foco em tecnologia de ponta e atendimento personalizado, somos parceiros confiáveis para empresas que buscam qualidade e eficiência.
+            </p>
+        </div>
+
+        <div class="partner-card">
+            <img src="fotos/asfoto.png" alt="Assistech Logo" />
+            <h3>Assistec</h3>
+            <p>
+                A Assistec é referência em soluções tecnológicas, especializada em suporte técnico e manutenção de hardware e software. Comprometida com a inovação, oferece atendimento rápido e eficaz, auxiliando empresas a manter seus sistemas sempre atualizados e operacionais.
+            </p>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG5-Nosso.time.html">NOSSO TIME</a>
+    </nav>
+
+    <footer>
+        <p>&copy; 2025 Digital Zenith. Todos os direitos reservados. | São José da Lapa - MG, Rua Antonio Ferreira Saturnino, 390 - Centro.</p>
+    </footer>
+
+</body>
+
+</html>

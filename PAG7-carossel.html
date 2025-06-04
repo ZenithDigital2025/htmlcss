@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Zenith - Carrossel</title>
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #021b2c, #084d75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .carrossel-container {
+            position: relative;
+            width: 36rem;
+            height: 23rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .fotos {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .fotos::-webkit-scrollbar {
+            display: none;
+        }
+
+        .fotos img {
+            width: 100%;
+            height: 100%;
+            flex-shrink: 0;
+            object-fit: cover;
+            scroll-snap-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .fotos img:hover {
+            transform: scale(1.03);
+        }
+
+        .indicadores {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+        }
+
+        .indicadores span {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .indicadores span.ativo {
+            background-color: #4ec0f0;
+        }
+
+        .bottom-nav {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+
+        .bottom-nav a, .bottom-nav button {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(6px);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 12px;
+            border: 2px solid #4ec0f0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .bottom-nav a:hover, .bottom-nav button:hover {
+            background-color: rgba(78, 192, 240, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Botões de seta */
+        .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 24px;
+            padding: 10px 14px;
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .seta:hover {
+            background-color: rgba(78, 192, 240, 0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .seta.esquerda {
+            left: 10px;
+        }
+
+        .seta.direita {
+            right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .carrossel-container {
+                width: 90%;
+                height: 20rem;
+            }
+
+            .bottom-nav {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+         h1 {
+            text-align: center;
+            margin: 50px 0 20px;
+            font-size: 36px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+     <h1>Nossos Parceiros</h1>
+    <div class="carrossel-container">
+        <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+        <div class="fotos" id="carrossel">
+            <img src="img/IMGcarrocel.jpeg" alt="Imagem 1">
+            <img src="img/IMGcarrocel10.jpeg" alt="Imagem 2">
+            <img src="img/IMGcarrocel11.jpeg" alt="Imagem 3">
+            <img src="img/IMGcarrocel12.jpeg" alt="Imagem 4">
+            <img src="img/IMGcarrocel14.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel17.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel18.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel19.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel20.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel21.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel22.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel24.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel26.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel28.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel32.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel40.jpeg" alt="Imagem 5">
+            <img src="img/IMGcarrocel41.jpeg" alt="Imagem 5">
+        <img src="img/IMGcarrocel45.jpeg" alt="Imagem 5">
+        <img src="img/IMGcarrocel9.jpeg" alt="Imagem 5">
+
+        </div>
+        <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+
+        <div class="indicadores" id="indicadores"></div>
+    </div>
+
+    <div class="bottom-nav">
+        <button onclick="history.back()">VOLTAR</button>
+        <a href="PAG8-formulario.html">ENTRE EM CONTATO</a>
+    </div>
+
+    <script>
+        const carrossel = document.getElementById('carrossel');
+        const imagens = carrossel.querySelectorAll('img');
+        const indicadoresContainer = document.getElementById('indicadores');
+
+        let slideAtual = 0;
+
+        // Cria os indicadores dinamicamente
+        imagens.forEach((_, index) => {
+            const span = document.createElement('span');
+            if (index === 0) span.classList.add('ativo');
+            indicadoresContainer.appendChild(span);
+        });
+
+        const indicadores = indicadoresContainer.children;
+
+        // Atualiza os indicadores
+        function atualizarIndicadores() {
+            for (let i = 0; i < indicadores.length; i++) {
+                indicadores[i].classList.remove('ativo');
+            }
+            indicadores[slideAtual].classList.add('ativo');
+        }
+
+        // Função para mudar o slide com botões
+        function mudarSlide(direcao) {
+            slideAtual += direcao;
+            if (slideAtual < 0) slideAtual = imagens.length - 1;
+            if (slideAtual >= imagens.length) slideAtual = 0;
+
+            carrossel.scrollTo({
+                left: carrossel.clientWidth * slideAtual,
+                behavior: 'smooth'
+            });
+
+            atualizarIndicadores();
+        }
+
+        // Atualiza indicador quando arrasta manualmente
+        carrossel.addEventListener('scroll', () => {
+            const index = Math.round(carrossel.scrollLeft / carrossel.clientWidth);
+            if (index !== slideAtual) {
+                slideAtual = index;
+                atualizarIndicadores();
+            }
+        });
+    </script>
+
+</body>
+</html>
