@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Formulário - Digital Zenith</title>
-    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64">
-
-    <!-- Link do Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="icon" href="fotos/sem fundo.png" type="image/png" sizes="64x64" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <style>
         * {
             box-sizing: border-box;
@@ -15,7 +15,6 @@
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         body {
             background: linear-gradient(135deg, #021b2c, #084d75);
             color: #fff;
@@ -23,17 +22,14 @@
             display: flex;
             flex-direction: column;
         }
-
-        /* Container dos botões do topo */
         .top-buttons {
             margin: 20px;
             display: flex;
             gap: 20px;
             justify-content: center;
         }
-
-        /* Estilo dos botões Home e Voltar */
-        .top-buttons a, .top-buttons button {
+        .top-buttons a,
+        .top-buttons button {
             background-color: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(6px);
             color: #ffffff;
@@ -48,49 +44,76 @@
             gap: 8px;
             transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
         }
-
-        .top-buttons a:hover, .top-buttons button:hover {
+        .top-buttons a:hover,
+        .top-buttons button:hover {
             background-color: rgba(78, 192, 240, 0.3);
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
         }
-
         section {
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(6px);
-            border-radius: 16px;
-            max-width: 600px;
+            max-width: 900px;
             width: 90%;
             margin: 40px auto;
             padding: 30px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
         }
-
         h2 {
             text-align: center;
             margin-bottom: 10px;
             font-size: 28px;
             color: #ffffff;
             border-bottom: 3px solid transparent;
-            border-image: linear-gradient(to right, #4ec0f0, #4ec0f0 30%, transparent 30%);
+            border-image: linear-gradient(
+                to right,
+                #4ec0f0,
+                #4ec0f0 30%,
+                transparent 30%
+            );
             border-image-slice: 1;
             padding-bottom: 8px;
         }
-
         p {
             text-align: center;
             margin-bottom: 30px;
             color: #d0d0d0;
         }
-
+        .form-container {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        /* Animação pisar para o mascote */
+        @keyframes pisar {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .form-image img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            animation: pisar 3s ease-in-out infinite;
+        }
+        form {
+            flex: 1;
+            min-width: 260px;
+        }
         label {
             display: block;
             margin-bottom: 6px;
             font-weight: 600;
             color: #a0c8e0;
         }
-
-        input[type="text"], textarea {
+        input[type='text'],
+        textarea {
             width: 100%;
             padding: 14px;
             margin-bottom: 20px;
@@ -100,22 +123,20 @@
             color: #fff;
             transition: border-color 0.3s, background-color 0.3s;
         }
-
-        input::placeholder, textarea::placeholder {
+        input::placeholder,
+        textarea::placeholder {
             color: #c0c0c0;
         }
-
-        input[type="text"]:focus, textarea:focus {
+        input[type='text']:focus,
+        textarea:focus {
             border-color: #71d5ff;
             background-color: rgba(255, 255, 255, 0.12);
             outline: none;
         }
-
         textarea {
             resize: vertical;
         }
-
-        input[type="submit"] {
+        input[type='submit'] {
             width: 100%;
             background-color: #4ec0f0;
             color: white;
@@ -132,34 +153,36 @@
             justify-content: center;
             gap: 8px;
         }
-
-        input[type="submit"]:hover {
+        input[type='submit']:hover {
             background-color: #2fa3d6;
             transform: scale(1.03);
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
         }
-
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .top-buttons {
                 flex-direction: column;
                 gap: 10px;
                 align-items: center;
             }
-
             section {
                 margin: 20px;
                 padding: 20px;
             }
-
             h2 {
                 font-size: 24px;
+            }
+            .form-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .form-image img {
+                max-width: 100%;
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- Botões Home e Voltar no topo -->
     <div class="top-buttons">
         <button onclick="history.back()">
             <i class="fas fa-arrow-left"></i> <b>VOLTAR</b>
@@ -167,26 +190,51 @@
         <a href="index.html">
             <i class="fas fa-home"></i> <b>HOME</b>
         </a>
-        
     </div>
 
     <section id="contato">
         <h2>Fale Conosco</h2>
         <p>Entre em contato e tire todas as suas dúvidas.</p>
-        <form action="">
-            <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nomecompleto" placeholder="Seu nome completo..." required>
 
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Seu email..." required>
+        <div class="form-container">
+            <div class="form-image">
+                <img
+                    src="fotos/cocacola_000011.png"
+                    alt="Mascote Digital Zenith"
+                />
+            </div>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea name="mensagem" id="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+            <form action="">
+                <label for="nome">Nome</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nomecompleto"
+                    placeholder="Seu nome completo..."
+                    required
+                />
 
-            <input type="submit" value="Enviar">
-        </form>
+                <label for="email">Email</label>
+                <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Seu email..."
+                    required
+                />
+
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                    name="mensagem"
+                    id="mensagem"
+                    rows="6"
+                    placeholder="Escreva sua mensagem..."
+                    required
+                ></textarea>
+
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
     </section>
- 
-
 </body>
 </html>
